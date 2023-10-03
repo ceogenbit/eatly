@@ -1,0 +1,2558 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Italic.woff2") format("woff2"), url("../fonts/Poppins-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #676767;
+  line-height: 1;
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Poppins";
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 81.875rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg--contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.button {
+  color: #F9F9F9;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 26.743px;
+  /* 150% */
+  text-transform: capitalize;
+  border-radius: 17.829px;
+  background-color: #5c4eAe;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-transition: background-color 0.4s ease-in-out 0s, outline 0.2s ease-in-out 0s, color 0.4s ease-in-out 0s;
+  transition: background-color 0.4s ease-in-out 0s, outline 0.2s ease-in-out 0s, color 0.4s ease-in-out 0s;
+}
+
+.title {
+  color: #18181b;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: capitalize;
+}
+
+.title span {
+  color: #6c5fbc;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu__body {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #5c4eAe;
+  color: #fff;
+  overflow: auto;
+  -webkit-transition: right 0.5s ease 0s;
+  transition: right 0.5s ease 0s;
+}
+
+.menu__body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  background-color: #efdbff;
+  -webkit-box-shadow: 0px 5px 5px -6px rgb(66, 68, 90);
+          box-shadow: 0px 5px 5px -6px rgb(66, 68, 90);
+  -webkit-transition: right 0.5s ease 0.06s, -webkit-box-shadow 0.5s ease 0s;
+  transition: right 0.5s ease 0.06s, -webkit-box-shadow 0.5s ease 0s;
+  transition: right 0.5s ease 0.06s, box-shadow 0.5s ease 0s;
+  transition: right 0.5s ease 0.06s, box-shadow 0.5s ease 0s, -webkit-box-shadow 0.5s ease 0s;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  font-size: 2rem;
+}
+
+.menu__link {
+  display: block;
+  text-align: end;
+  padding: 0.625rem 0rem;
+}
+
+.menu-open .menu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5rem;
+  right: 0;
+  top: 0;
+}
+
+.menu-open .menu__body::after {
+  right: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0px 5px 5px -6px rgb(66, 68, 90);
+          box-shadow: 0px 5px 5px -6px rgb(66, 68, 90);
+  z-index: 5;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: min-height 0.5s ease 0s;
+  transition: min-height 0.5s ease 0s;
+}
+
+.header__logo {
+  z-index: 5;
+}
+
+.header__nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  row-gap: 0.625rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.9375rem 0rem 0.9375rem;
+}
+
+.header__nav-item {
+  position: relative;
+}
+
+.header__nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: -0.4375rem;
+  left: 0;
+  width: 0;
+  height: 0.1875rem;
+  background-color: #5c4eAe;
+  -webkit-transition: width 0.5s ease 0s;
+  transition: width 0.5s ease 0s;
+}
+
+.header__login-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__login-button {
+  color: #606060;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 26.743px;
+  /* 150% */
+  text-transform: capitalize;
+  -webkit-transition: color 0.3s ease-in-out 0s;
+  transition: color 0.3s ease-in-out 0s;
+}
+
+.header__signup-button {
+  font-weight: 700;
+}
+
+._header-scroll .header__container {
+  min-height: 4.375rem;
+}
+
+._header-scroll .menu__body::after {
+  height: 4.375rem;
+}
+
+.footer {
+  background-color: #eaeaea;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  border-bottom: rgba(129, 129, 129, 0.4039215686) 0.0625rem solid;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 0.9375rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__link {
+  -webkit-transition: color 0.3s ease-in-out 0s;
+  transition: color 0.3s ease-in-out 0s;
+}
+
+.footer__down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.footer__license {
+  text-align: center;
+}
+
+.footer__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__social-link img {
+  -webkit-transition: -webkit-transform 0.6s ease 0s;
+  transition: -webkit-transform 0.6s ease 0s;
+  transition: transform 0.6s ease 0s;
+  transition: transform 0.6s ease 0s, -webkit-transform 0.6s ease 0s;
+}
+
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero__part-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.hero__label {
+  position: relative;
+  color: rgba(32, 31, 31, 0.2);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-left: 4.6875rem;
+  z-index: -1;
+}
+
+.hero__label:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+.hero__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3.375rem;
+  height: 0.0625rem;
+  background-color: rgba(32, 31, 31, 0.2);
+}
+
+.hero__title {
+  color: #201F1F;
+  font-size: 4.6875rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero__title:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.hero__title span {
+  color: #5c4eAe;
+}
+
+.hero__text {
+  color: #676767;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.hero__text span {
+  color: #5c4eAe;
+}
+
+.hero__button-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.125rem;
+}
+
+.hero__go-button {
+  background-color: #f9f9f9;
+  color: #5c4eAe;
+  font-size: 1rem;
+  color: #6C5FBC;
+  text-transform: capitalize;
+  outline: #5c4eAe 0.0625rem solid;
+  -webkit-transition: outline 0.4s ease 0s, color 0.3s ease 0s, background-color 0.4s ease 0s;
+  transition: outline 0.4s ease 0s, color 0.3s ease 0s, background-color 0.4s ease 0s;
+}
+
+.hero__rating-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.hero__rating-wrap img {
+  max-width: 7.6875rem;
+  width: 100%;
+}
+
+.hero__stars-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 0.4375rem;
+  gap: 0.3125rem;
+}
+
+.hero__rating-text {
+  padding-top: 0.4375rem;
+  color: #334155;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.hero__part-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.hero__image-wrap {
+  position: relative;
+  z-index: -1;
+}
+
+.hero__image-wrap img {
+  max-width: 26.875rem;
+  width: 100%;
+  max-height: 27.6875rem;
+  height: 100%;
+}
+
+.chickenhell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0rem 1rem 1.5625rem 0rem rgba(70, 70, 70, 0.123);
+          box-shadow: 0rem 1rem 1.5625rem 0rem rgba(70, 70, 70, 0.123);
+  gap: 1.125rem;
+  padding: 0rem 1rem;
+}
+
+.chickenhell__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #323142;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.chickenhell__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.chickenhell__title:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.chickenhell__subtitle {
+  font-size: 0.625rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.chickenhell__subtitle:not(:last-child) {
+  margin-bottom: 0.3125rem;
+}
+
+.chickenhell__time {
+  color: #acadb9;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  display: inline-block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.graphic {
+  width: 40%;
+  overflow: hidden;
+  border-radius: 1.0625rem;
+  background: #fff;
+  -webkit-box-shadow: 0.875rem 1.1875rem 2.375rem 0px rgba(26, 32, 44, 0.15);
+          box-shadow: 0.875rem 1.1875rem 2.375rem 0px rgba(26, 32, 44, 0.15);
+}
+
+.graphic img {
+  width: 100%;
+}
+
+.no-webp .numbers{
+  background: url(../img/numbers/background.jpg) 0 0/cover no-repeat; }
+
+.numbers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.numbers__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  text-align: center;
+}
+
+.numbers__item:not(:last-child) {
+  border-right: #808080 0.0625rem solid;
+}
+
+.numbers__number {
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.25;
+  font-family: Inter;
+}
+
+.numbers__number:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.numbers__text {
+  color: #cbd5e1;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.quality__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: #cbcbcb 0.0625rem solid;
+}
+
+.quality__part-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  text-align: center;
+}
+
+.quality__part-left img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.quality__screen-wrap img {
+  max-width: 19rem;
+  width: 100%;
+}
+
+.quality__part-right {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.quality__text-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: circle;
+}
+
+.quality__item {
+  position: relative;
+  padding-left: 0.9375rem;
+}
+
+.quality__item::before {
+  content: "";
+  position: absolute;
+  top: 0.8125rem;
+  left: 0;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 3.125rem;
+  background-color: #676767;
+}
+
+.quality__text {
+  color: #676767;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.quality__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+
+.quality__button svg path {
+  -webkit-transition: stroke 0.4s ease 0s;
+  transition: stroke 0.4s ease 0s;
+}
+
+.quality__arrow-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+}
+
+.restaurants__container {
+  border-bottom: #cbcbcb 0.0625rem solid;
+  text-align: center;
+}
+
+.restaurants__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.restaurants__item {
+  max-width: 30.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  padding-bottom: 1.125rem;
+  -webkit-box-shadow: 0.375rem 4.4375rem 2.1875rem 0px rgba(229, 229, 229, 0.7);
+          box-shadow: 0.375rem 4.4375rem 2.1875rem 0px rgba(229, 229, 229, 0.7);
+}
+
+.restaurants__image-link {
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.restaurants__image-link img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.restaurants__text-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.625rem;
+  padding-top: 0.875rem;
+  text-align: start;
+}
+
+.restaurants__status {
+  padding: 0.1875rem 0.5rem;
+  background-color: #F7EDD0;
+  display: inline-block;
+  color: #daa31a;
+  border-radius: 0.3125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.restaurants__status--red {
+  border-radius: 0.3125rem;
+  color: #fb471d;
+  background-color: #f7c5ba;
+}
+
+.restaurants__title-food {
+  color: var(--black, #323142);
+  font-weight: 600;
+  line-height: 1.2;
+  -webkit-transition: color 0.4s ease 0s;
+  transition: color 0.4s ease 0s;
+}
+
+.restaurants__rating-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.4375rem;
+}
+
+.restaurants__enter {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0rem 0.9375rem;
+  padding: 0.625rem 0.875rem;
+  background-color: #dbd9ee;
+  border-radius: 3.125rem;
+}
+
+.restaurants__enter svg path {
+  -webkit-transition: fill 200ms ease 0s;
+  transition: fill 200ms ease 0s;
+}
+
+.restaurants__time {
+  color: #8e97a6;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.restaurants__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.4375rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.restaurants__rating svg {
+  margin-bottom: 0.1875rem;
+}
+
+.restaurants__button-viewall {
+  display: inline-block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.dishes__title {
+  text-align: center;
+}
+
+.dishes__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.25rem;
+}
+
+.dishes__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.3125rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 14.0625rem;
+          flex: 0 1 14.0625rem;
+  position: relative;
+  -webkit-box-shadow: 0.4375rem 5.125rem 2.5625rem 0rem rgba(229, 229, 229, 0.7);
+          box-shadow: 0.4375rem 5.125rem 2.5625rem 0rem rgba(229, 229, 229, 0.7);
+  border-radius: 2.125rem;
+}
+
+.dishes__heart-icon-link {
+  display: inline-block;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  border-radius: 3.125rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.dishes__heart-icon-link svg path {
+  -webkit-transition: fill 200ms ease 0s;
+  transition: fill 200ms ease 0s;
+}
+
+.dishes__food-image-link {
+  text-align: center;
+}
+
+.dishes__image {
+  max-width: 100%;
+}
+
+.dishes__status {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  border-radius: 0.3125rem;
+  padding: 0.125rem 0.375rem;
+}
+
+.dishes__status--yellow {
+  background-color: #f7edd0;
+  color: #daa31a;
+}
+
+.dishes__status--red {
+  background-color: #f7c5ba;
+  color: #fb471d;
+}
+
+.dishes__status--green {
+  background-color: rgba(51, 172, 100, 0.3215686275);
+  color: #309D5B;
+}
+
+.dishes__title-food {
+  color: #323142;
+  font-size: 1.4375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.dishes__time-star-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3125rem;
+  color: #8e97a6;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.dishes__price-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dishes__price-wrapper:not(:first-child) {
+  margin-top: 0.8125rem;
+}
+
+.dishes__price {
+  color: var(--black, #323142);
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.dishes__plus {
+  padding: 0.625rem 0.8125rem 0.625rem 0.8125rem;
+  background-color: #323142;
+  color: #fff;
+  border-radius: 0.5625rem;
+  -webkit-transition: background-color 0.2s ease 0s;
+  transition: background-color 0.2s ease 0s;
+}
+
+@media (min-width: 81.875em) {
+  .button {
+    padding-top: 1.0625rem;
+  }
+
+  .button {
+    padding-right: 1.5625rem;
+  }
+
+  .button {
+    padding-bottom: 1.0625rem;
+  }
+
+  .button {
+    padding-left: 1.5625rem;
+  }
+
+  .title {
+    font-size: 3.125rem;
+  }
+
+  .menu__body {
+    padding-top: 11.375rem;
+  }
+
+  .menu__body::after {
+    height: 8.125rem;
+  }
+
+  .header__container {
+    gap: 6.5625rem;
+  }
+
+  .header__container {
+    min-height: 8.125rem;
+  }
+
+  .header__nav-list {
+    -webkit-column-gap: 3.4375rem;
+       -moz-column-gap: 3.4375rem;
+            column-gap: 3.4375rem;
+  }
+
+  .header__login-wrap {
+    gap: 2.1875rem;
+  }
+
+  .footer {
+    padding-top: 6.0625rem;
+  }
+
+  .footer {
+    padding-bottom: 5.3125rem;
+  }
+
+  .footer__up {
+    padding-bottom: 1.875rem;
+  }
+
+  .footer__links {
+    -webkit-column-gap: 4.375rem;
+       -moz-column-gap: 4.375rem;
+            column-gap: 4.375rem;
+  }
+
+  .footer__down {
+    padding-top: 3.75rem;
+  }
+
+  .footer__social-list {
+    gap: 3.125rem;
+  }
+
+  .hero {
+    padding-top: 13.125rem;
+  }
+
+  .hero {
+    padding-bottom: 7.5rem;
+  }
+
+  .hero__container {
+    gap: 4.375rem;
+  }
+
+  .hero__title {
+    font-size: 4.6875rem;
+  }
+
+  .hero__text:not(:last-child) {
+    margin-bottom: 3.3125rem;
+  }
+
+  .hero__button-wrap:not(:last-child) {
+    margin-bottom: 2.75rem;
+  }
+
+  .hero__rating-wrap {
+    gap: 1.25rem;
+  }
+
+  .hero__rating-text {
+    font-size: 1rem;
+  }
+
+  .hero__image-wrap {
+    margin-top: -1.25rem;
+  }
+
+  .hero__image-wrap {
+    padding-left: 4.375rem;
+  }
+
+  .chickenhell {
+    max-width: 20.625rem;
+  }
+
+  .chickenhell {
+    margin-right: 0.0000000625rem;
+  }
+
+  .graphic {
+    margin-top: -11.25rem;
+  }
+
+  .numbers {
+    padding-top: 3.4375rem;
+  }
+
+  .numbers {
+    padding-bottom: 3.4375rem;
+  }
+
+  .numbers__item {
+    padding-left: 4.125rem;
+  }
+
+  .numbers__item {
+    padding-right: 4.125rem;
+  }
+
+  .numbers__number {
+    font-size: 2.6875rem;
+  }
+
+  .numbers__text {
+    font-size: 0.875rem;
+  }
+
+  .quality {
+    padding-top: 7.5rem;
+  }
+
+  .quality__container {
+    gap: 2.5rem;
+  }
+
+  .quality__container {
+    padding-bottom: 7.5rem;
+  }
+
+  .quality__title:not(:last-child) {
+    margin-bottom: 3.9375rem;
+  }
+
+  .quality__text-list {
+    gap: 1.5625rem;
+  }
+
+  .quality__text-list:not(:last-child) {
+    margin-bottom: 3.9375rem;
+  }
+
+  .restaurants {
+    padding-top: 6.25rem;
+  }
+
+  .restaurants__container {
+    padding-bottom: 4.0625rem;
+  }
+
+  .restaurants__title:not(:last-child) {
+    margin-bottom: 5.3125rem;
+  }
+
+  .restaurants__list {
+    gap: 1.875rem;
+  }
+
+  .restaurants__list {
+    padding-bottom: 7.5rem;
+  }
+
+  .restaurants__text-inner {
+    padding-left: 2.125rem;
+  }
+
+  .restaurants__text-inner {
+    padding-right: 2.125rem;
+  }
+
+  .restaurants__title-food {
+    font-size: 1.5625rem;
+  }
+
+  .restaurants__time {
+    font-size: 1.1875rem;
+  }
+
+  .restaurants__rating {
+    font-size: 1.1875rem;
+  }
+
+  .dishes {
+    padding-top: 4.0625rem;
+  }
+
+  .dishes {
+    padding-bottom: 6.25rem;
+  }
+
+  .dishes__title:not(:last-child) {
+    margin-bottom: 4.6875rem;
+  }
+
+  .dishes__item {
+    padding: 1.4375rem;
+  }
+}
+
+@media (max-width: 46em) {
+  .dishes__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 20em) {
+  .button {
+    padding-top: 0.625rem;
+  }
+
+  .button {
+    padding-right: 1.125rem;
+  }
+
+  .button {
+    padding-bottom: 0.625rem;
+  }
+
+  .button {
+    padding-left: 1.125rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .menu__body {
+    padding-top: 8.875rem;
+  }
+
+  .menu__body::after {
+    height: 4.375rem;
+  }
+
+  .header__container {
+    gap: 0.625rem;
+  }
+
+  .header__container {
+    min-height: 4.375rem;
+  }
+
+  .header__nav-list {
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+
+  .header__login-wrap {
+    gap: 0.9375rem;
+  }
+
+  .footer {
+    padding-top: 1.25rem;
+  }
+
+  .footer {
+    padding-bottom: 1.25rem;
+  }
+
+  .footer__up {
+    padding-bottom: 0.9375rem;
+  }
+
+  .footer__links {
+    -webkit-column-gap: 1.5625rem;
+       -moz-column-gap: 1.5625rem;
+            column-gap: 1.5625rem;
+  }
+
+  .footer__down {
+    padding-top: 1.25rem;
+  }
+
+  .footer__social-list {
+    gap: 1.25rem;
+  }
+
+  .hero {
+    padding-top: 6.875rem;
+  }
+
+  .hero {
+    padding-bottom: 1.875rem;
+  }
+
+  .hero__container {
+    gap: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+
+  .hero__text:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__button-wrap:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__rating-wrap {
+    gap: 0.9375rem;
+  }
+
+  .hero__rating-text {
+    font-size: 0.75rem;
+  }
+
+  .hero__image-wrap {
+    margin-top: -0.625rem;
+  }
+
+  .hero__image-wrap {
+    padding-left: 0.0000000625rem;
+  }
+
+  .chickenhell {
+    max-width: 15.625rem;
+  }
+
+  .chickenhell {
+    margin-right: 0.3125rem;
+  }
+
+  .graphic {
+    margin-top: -6.25rem;
+  }
+
+  .numbers {
+    padding-top: 1.25rem;
+  }
+
+  .numbers {
+    padding-bottom: 1.25rem;
+  }
+
+  .numbers__item {
+    padding-left: 0.0000000625rem;
+  }
+
+  .numbers__item {
+    padding-right: 0.0000000625rem;
+  }
+
+  .numbers__number {
+    font-size: 1.875rem;
+  }
+
+  .numbers__text {
+    font-size: 0.75rem;
+  }
+
+  .quality {
+    padding-top: 1.25rem;
+  }
+
+  .quality__container {
+    gap: 1.25rem;
+  }
+
+  .quality__container {
+    padding-bottom: 1.25rem;
+  }
+
+  .quality__title:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+
+  .quality__text-list {
+    gap: 0.9375rem;
+  }
+
+  .quality__text-list:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+
+  .restaurants {
+    padding-top: 1.25rem;
+  }
+
+  .restaurants__container {
+    padding-bottom: 1.25rem;
+  }
+
+  .restaurants__title:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .restaurants__list {
+    gap: 1.25rem;
+  }
+
+  .restaurants__list {
+    padding-bottom: 1.25rem;
+  }
+
+  .restaurants__text-inner {
+    padding-left: 0.9375rem;
+  }
+
+  .restaurants__text-inner {
+    padding-right: 0.9375rem;
+  }
+
+  .restaurants__title-food {
+    font-size: 1.25rem;
+  }
+
+  .restaurants__time {
+    font-size: 0.875rem;
+  }
+
+  .restaurants__rating {
+    font-size: 0.875rem;
+  }
+
+  .dishes {
+    padding-top: 1.25rem;
+  }
+
+  .dishes {
+    padding-bottom: 1.25rem;
+  }
+
+  .dishes__title:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .dishes__item {
+    padding: 0.9375rem;
+  }
+}
+
+@media (max-width: 70.25em) {
+  .dishes__list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 2.5rem;
+    height: 1.75rem;
+    z-index: 5;
+  }
+
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: #5c4eAe;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 0.0625rem);
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before,
+  .menu-open .icon-menu::after {
+    background-color: #5c4eAe;
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.125rem);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .hero__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .hero__image-wrap {
+    text-align: center;
+  }
+
+  .quality__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .restaurants__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurants__text-wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 47.99875em) and (any-hover: none) {
+  .icon-menu {
+    cursor: default;
+  }
+}
+
+@media (max-width: 34.875em) {
+  .footer__up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__down {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 34.25em) {
+  .numbers__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .numbers__item:not(:last-child) {
+    border-bottom: #808080 0.0625rem solid;
+    border-right: 0rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .menu__link {
+    text-align: center;
+  }
+
+  .menu-open .menu__body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header__login-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+    padding-bottom: 1.25rem;
+  }
+
+  .header__login-button {
+    color: #f9f9f9;
+  }
+
+  .header__signup-button {
+    outline: #f9f9f9 0.125rem solid;
+  }
+
+  .restaurants__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .dishes__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 81.875em) {
+@supports (padding-top: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem )) {
+    .button {
+      padding-top: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem )) {
+    .button {
+      padding-top: calc(0.625rem + 0.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-right: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem )) {
+    .button {
+      padding-right: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem );
+    }
+}
+
+@supports not (padding-right: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem )) {
+    .button {
+      padding-right: calc(1.125rem + 0.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem )) {
+    .button {
+      padding-bottom: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 0.625rem , 0.4835858586rem  +  0.7070707071vw , 1.0625rem )) {
+    .button {
+      padding-bottom: calc(0.625rem + 0.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-left: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem )) {
+    .button {
+      padding-left: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem );
+    }
+}
+
+@supports not (padding-left: clamp( 1.125rem , 0.9835858586rem  +  0.7070707071vw , 1.5625rem )) {
+    .button {
+      padding-left: calc(1.125rem + 0.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3.125rem )) {
+    .title {
+      font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 2rem , 1.6363636364rem  +  1.8181818182vw , 3.125rem )) {
+    .title {
+      font-size: calc(2rem + 1.125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 8.875rem , 8.0669191919rem  +  4.0404040404vw , 11.375rem )) {
+    .menu__body {
+      padding-top: clamp( 8.875rem , 8.0669191919rem  +  4.0404040404vw , 11.375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 8.875rem , 8.0669191919rem  +  4.0404040404vw , 11.375rem )) {
+    .menu__body {
+      padding-top: calc(8.875rem + 2.5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem )) {
+    .menu__body::after {
+      height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem );
+    }
+}
+
+@supports not (height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem )) {
+    .menu__body::after {
+      height: calc(4.375rem + 3.75 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 0.625rem , -1.2941919192rem  +  9.595959596vw , 6.5625rem )) {
+    .header__container {
+      gap: clamp( 0.625rem , -1.2941919192rem  +  9.595959596vw , 6.5625rem );
+    }
+}
+
+@supports not (gap: clamp( 0.625rem , -1.2941919192rem  +  9.595959596vw , 6.5625rem )) {
+    .header__container {
+      gap: calc(0.625rem + 5.9375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (min-height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem )) {
+    .header__container {
+      min-height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem );
+    }
+}
+
+@supports not (min-height: clamp( 4.375rem , 3.1628787879rem  +  6.0606060606vw , 8.125rem )) {
+    .header__container {
+      min-height: calc(4.375rem + 3.75 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports ((-moz-column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem )) or (column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem ))) {
+    .header__nav-list {
+      -webkit-column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem );
+         -moz-column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem );
+              column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem )) or (column-gap: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.4375rem ))) {
+    .header__nav-list {
+      -webkit-column-gap: calc(0.625rem + 2.8125 * (100vw - 20rem) / 61.875);
+         -moz-column-gap: calc(0.625rem + 2.8125 * (100vw - 20rem) / 61.875);
+              column-gap: calc(0.625rem + 2.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 0.9375rem , 0.533459596rem  +  2.0202020202vw , 2.1875rem )) {
+    .header__login-wrap {
+      gap: clamp( 0.9375rem , 0.533459596rem  +  2.0202020202vw , 2.1875rem );
+    }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.533459596rem  +  2.0202020202vw , 2.1875rem )) {
+    .header__login-wrap {
+      gap: calc(0.9375rem + 1.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , -0.3055555556rem  +  7.7777777778vw , 6.0625rem )) {
+    .footer {
+      padding-top: clamp( 1.25rem , -0.3055555556rem  +  7.7777777778vw , 6.0625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , -0.3055555556rem  +  7.7777777778vw , 6.0625rem )) {
+    .footer {
+      padding-top: calc(1.25rem + 4.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem )) {
+    .footer {
+      padding-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem )) {
+    .footer {
+      padding-bottom: calc(1.25rem + 4.0625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 0.9375rem , 0.634469697rem  +  1.5151515152vw , 1.875rem )) {
+    .footer__up {
+      padding-bottom: clamp( 0.9375rem , 0.634469697rem  +  1.5151515152vw , 1.875rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 0.9375rem , 0.634469697rem  +  1.5151515152vw , 1.875rem )) {
+    .footer__up {
+      padding-bottom: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports ((-moz-column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem )) or (column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem ))) {
+    .footer__links {
+      -webkit-column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem );
+         -moz-column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem );
+              column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem )) or (column-gap: clamp( 1.5625rem , 0.6534090909rem  +  4.5454545455vw , 4.375rem ))) {
+    .footer__links {
+      -webkit-column-gap: calc(1.5625rem + 2.8125 * (100vw - 20rem) / 61.875);
+         -moz-column-gap: calc(1.5625rem + 2.8125 * (100vw - 20rem) / 61.875);
+              column-gap: calc(1.5625rem + 2.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
+    .footer__down {
+      padding-top: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
+    .footer__down {
+      padding-top: calc(1.25rem + 2.5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 0.6439393939rem  +  3.0303030303vw , 3.125rem )) {
+    .footer__social-list {
+      gap: clamp( 1.25rem , 0.6439393939rem  +  3.0303030303vw , 3.125rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.6439393939rem  +  3.0303030303vw , 3.125rem )) {
+    .footer__social-list {
+      gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 6.875rem , 4.8547979798rem  +  10.101010101vw , 13.125rem )) {
+    .hero {
+      padding-top: clamp( 6.875rem , 4.8547979798rem  +  10.101010101vw , 13.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 6.875rem , 4.8547979798rem  +  10.101010101vw , 13.125rem )) {
+    .hero {
+      padding-top: calc(6.875rem + 6.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 0.0568181818rem  +  9.0909090909vw , 7.5rem )) {
+    .hero {
+      padding-bottom: clamp( 1.875rem , 0.0568181818rem  +  9.0909090909vw , 7.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 0.0568181818rem  +  9.0909090909vw , 7.5rem )) {
+    .hero {
+      padding-bottom: calc(1.875rem + 5.625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 2.5rem , 1.8939393939rem  +  3.0303030303vw , 4.375rem )) {
+    .hero__container {
+      gap: clamp( 2.5rem , 1.8939393939rem  +  3.0303030303vw , 4.375rem );
+    }
+}
+
+@supports not (gap: clamp( 2.5rem , 1.8939393939rem  +  3.0303030303vw , 4.375rem )) {
+    .hero__container {
+      gap: calc(2.5rem + 1.875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 2.25rem , 1.4621212121rem  +  3.9393939394vw , 4.6875rem )) {
+    .hero__title {
+      font-size: clamp( 2.25rem , 1.4621212121rem  +  3.9393939394vw , 4.6875rem );
+    }
+}
+
+@supports not (font-size: clamp( 2.25rem , 1.4621212121rem  +  3.9393939394vw , 4.6875rem )) {
+    .hero__title {
+      font-size: calc(2.25rem + 2.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.5833333333rem  +  3.3333333333vw , 3.3125rem )) {
+    .hero__text:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , 0.5833333333rem  +  3.3333333333vw , 3.3125rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.5833333333rem  +  3.3333333333vw , 3.3125rem )) {
+    .hero__text:not(:last-child) {
+      margin-bottom: calc(1.25rem + 2.0625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.7651515152rem  +  2.4242424242vw , 2.75rem )) {
+    .hero__button-wrap:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , 0.7651515152rem  +  2.4242424242vw , 2.75rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.7651515152rem  +  2.4242424242vw , 2.75rem )) {
+    .hero__button-wrap:not(:last-child) {
+      margin-bottom: calc(1.25rem + 1.5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem )) {
+    .hero__rating-wrap {
+      gap: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem );
+    }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.836489899rem  +  0.5050505051vw , 1.25rem )) {
+    .hero__rating-wrap {
+      gap: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem )) {
+    .hero__rating-text {
+      font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6691919192rem  +  0.404040404vw , 1rem )) {
+    .hero__rating-text {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-top: clamp( -1.25rem , -0.422979798rem  +  -1.0101010101vw , -0.625rem )) {
+    .hero__image-wrap {
+      margin-top: clamp( -1.25rem , -0.422979798rem  +  -1.0101010101vw , -0.625rem );
+    }
+}
+
+@supports not (margin-top: clamp( -1.25rem , -0.422979798rem  +  -1.0101010101vw , -0.625rem )) {
+    .hero__image-wrap {
+      margin-top: calc(-0.625rem + -0.625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-left: clamp( 0.0000000625rem , -1.4141413314rem  +  7.0707069697vw , 4.375rem )) {
+    .hero__image-wrap {
+      padding-left: clamp( 0.0000000625rem , -1.4141413314rem  +  7.0707069697vw , 4.375rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -1.4141413314rem  +  7.0707069697vw , 4.375rem )) {
+    .hero__image-wrap {
+      padding-left: calc(0.0000000625rem + 4.3749999375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (max-width: clamp( 15.625rem , 14.0088383838rem  +  8.0808080808vw , 20.625rem )) {
+    .chickenhell {
+      max-width: clamp( 15.625rem , 14.0088383838rem  +  8.0808080808vw , 20.625rem );
+    }
+}
+
+@supports not (max-width: clamp( 15.625rem , 14.0088383838rem  +  8.0808080808vw , 20.625rem )) {
+    .chickenhell {
+      max-width: calc(15.625rem + 5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-right: clamp( 0.0000000625rem , 0.4135100808rem  +  -0.505050404vw , 0.3125rem )) {
+    .chickenhell {
+      margin-right: clamp( 0.0000000625rem , 0.4135100808rem  +  -0.505050404vw , 0.3125rem );
+    }
+}
+
+@supports not (margin-right: clamp( 0.0000000625rem , 0.4135100808rem  +  -0.505050404vw , 0.3125rem )) {
+    .chickenhell {
+      margin-right: calc(0.3125rem + -0.3124999375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-top: clamp( -11.25rem , -4.6338383838rem  +  -8.0808080808vw , -6.25rem )) {
+    .graphic {
+      margin-top: clamp( -11.25rem , -4.6338383838rem  +  -8.0808080808vw , -6.25rem );
+    }
+}
+
+@supports not (margin-top: clamp( -11.25rem , -4.6338383838rem  +  -8.0808080808vw , -6.25rem )) {
+    .graphic {
+      margin-top: calc(-6.25rem + -5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem )) {
+    .numbers {
+      padding-top: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem )) {
+    .numbers {
+      padding-top: calc(1.25rem + 2.1875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem )) {
+    .numbers {
+      padding-bottom: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.5429292929rem  +  3.5353535354vw , 3.4375rem )) {
+    .numbers {
+      padding-bottom: calc(1.25rem + 2.1875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-left: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem )) {
+    .numbers__item {
+      padding-left: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem )) {
+    .numbers__item {
+      padding-left: calc(0.0000000625rem + 4.1249999375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-right: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem )) {
+    .numbers__item {
+      padding-right: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.0000000625rem , -1.3333332506rem  +  6.6666665657vw , 4.125rem )) {
+    .numbers__item {
+      padding-right: calc(0.0000000625rem + 4.1249999375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 1.875rem , 1.6123737374rem  +  1.3131313131vw , 2.6875rem )) {
+    .numbers__number {
+      font-size: clamp( 1.875rem , 1.6123737374rem  +  1.3131313131vw , 2.6875rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.6123737374rem  +  1.3131313131vw , 2.6875rem )) {
+    .numbers__number {
+      font-size: calc(1.875rem + 0.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.7095959596rem  +  0.202020202vw , 0.875rem )) {
+    .numbers__text {
+      font-size: clamp( 0.75rem , 0.7095959596rem  +  0.202020202vw , 0.875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.7095959596rem  +  0.202020202vw , 0.875rem )) {
+    .numbers__text {
+      font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .quality {
+      padding-top: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .quality {
+      padding-top: calc(1.25rem + 6.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+    .quality__container {
+      gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+    .quality__container {
+      gap: calc(1.25rem + 1.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .quality__container {
+      padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .quality__container {
+      padding-bottom: calc(1.25rem + 6.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem )) {
+    .quality__title:not(:last-child) {
+      margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem )) {
+    .quality__title:not(:last-child) {
+      margin-bottom: calc(0.625rem + 3.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 0.9375rem , 0.735479798rem  +  1.0101010101vw , 1.5625rem )) {
+    .quality__text-list {
+      gap: clamp( 0.9375rem , 0.735479798rem  +  1.0101010101vw , 1.5625rem );
+    }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.735479798rem  +  1.0101010101vw , 1.5625rem )) {
+    .quality__text-list {
+      gap: calc(0.9375rem + 0.625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem )) {
+    .quality__text-list:not(:last-child) {
+      margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.625rem , -0.4457070707rem  +  5.3535353535vw , 3.9375rem )) {
+    .quality__text-list:not(:last-child) {
+      margin-bottom: calc(0.625rem + 3.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem )) {
+    .restaurants {
+      padding-top: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem )) {
+    .restaurants {
+      padding-top: calc(1.25rem + 5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem )) {
+    .restaurants__container {
+      padding-bottom: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem )) {
+    .restaurants__container {
+      padding-bottom: calc(1.25rem + 2.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem )) {
+    .restaurants__title:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , -0.0631313131rem  +  6.5656565657vw , 5.3125rem )) {
+    .restaurants__title:not(:last-child) {
+      margin-bottom: calc(1.25rem + 4.0625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (gap: clamp( 1.25rem , 1.047979798rem  +  1.0101010101vw , 1.875rem )) {
+    .restaurants__list {
+      gap: clamp( 1.25rem , 1.047979798rem  +  1.0101010101vw , 1.875rem );
+    }
+}
+
+@supports not (gap: clamp( 1.25rem , 1.047979798rem  +  1.0101010101vw , 1.875rem )) {
+    .restaurants__list {
+      gap: calc(1.25rem + 0.625 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .restaurants__list {
+      padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -0.7702020202rem  +  10.101010101vw , 7.5rem )) {
+    .restaurants__list {
+      padding-bottom: calc(1.25rem + 6.25 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-left: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem )) {
+    .restaurants__text-inner {
+      padding-left: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem );
+    }
+}
+
+@supports not (padding-left: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem )) {
+    .restaurants__text-inner {
+      padding-left: calc(0.9375rem + 1.1875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-right: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem )) {
+    .restaurants__text-inner {
+      padding-right: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.9375rem , 0.5536616162rem  +  1.9191919192vw , 2.125rem )) {
+    .restaurants__text-inner {
+      padding-right: calc(0.9375rem + 1.1875 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.148989899rem  +  0.5050505051vw , 1.5625rem )) {
+    .restaurants__title-food {
+      font-size: clamp( 1.25rem , 1.148989899rem  +  0.5050505051vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.148989899rem  +  0.5050505051vw , 1.5625rem )) {
+    .restaurants__title-food {
+      font-size: calc(1.25rem + 0.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem )) {
+    .restaurants__time {
+      font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem )) {
+    .restaurants__time {
+      font-size: calc(0.875rem + 0.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem )) {
+    .restaurants__rating {
+      font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.773989899rem  +  0.5050505051vw , 1.1875rem )) {
+    .restaurants__rating {
+      font-size: calc(0.875rem + 0.3125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem )) {
+    .dishes {
+      padding-top: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.3409090909rem  +  4.5454545455vw , 4.0625rem )) {
+    .dishes {
+      padding-top: calc(1.25rem + 2.8125 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem )) {
+    .dishes {
+      padding-bottom: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , -0.3661616162rem  +  8.0808080808vw , 6.25rem )) {
+    .dishes {
+      padding-bottom: calc(1.25rem + 5 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.1388888889rem  +  5.5555555556vw , 4.6875rem )) {
+    .dishes__title:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , 0.1388888889rem  +  5.5555555556vw , 4.6875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.1388888889rem  +  5.5555555556vw , 4.6875rem )) {
+    .dishes__title:not(:last-child) {
+      margin-bottom: calc(1.25rem + 3.4375 * (100vw - 20rem) / 61.875);
+    }
+}
+
+@supports (padding: clamp( 0.9375rem , 0.7758838384rem  +  0.8080808081vw , 1.4375rem )) {
+    .dishes__item {
+      padding: clamp( 0.9375rem , 0.7758838384rem  +  0.8080808081vw , 1.4375rem );
+    }
+}
+
+@supports not (padding: clamp( 0.9375rem , 0.7758838384rem  +  0.8080808081vw , 1.4375rem )) {
+    .dishes__item {
+      padding: calc(0.9375rem + 0.5 * (100vw - 20rem) / 61.875);
+    }
+}
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #f9f9f9;
+    outline: solid 0.0625rem #5c4eAe;
+    color: #5c4eAe;
+  }
+
+  .header__login-button:hover {
+    color: #5c4eAe;
+  }
+
+  .header__nav-item:hover::before {
+    width: 100%;
+  }
+
+  .hero__go-button:hover {
+    outline: 0;
+    color: #f9f9f9;
+    background-color: #5c4eAe;
+  }
+
+  .quality__button:hover svg path {
+    stroke: #5c4eAe;
+  }
+
+  .restaurants__title-food:hover {
+    color: #5c4eAe;
+  }
+
+  .restaurants__image-link:hover {
+    -webkit-transform: scale(1.015);
+        -ms-transform: scale(1.015);
+            transform: scale(1.015);
+  }
+
+  .restaurants__enter:hover svg path {
+    fill: #5647b9;
+  }
+
+  .dishes__plus:hover {
+    background-color: #5c4eAe;
+  }
+
+  .dishes__title-food:hover {
+    color: #5c4eAe;
+  }
+
+  .dishes__heart-icon-link:hover svg path {
+    fill: #4c3bbd;
+  }
+
+  .footer__link:hover {
+    color: #5c4eAe;
+  }
+
+  .footer__social-link img:hover {
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.webp .numbers{ background: url(../img/numbers/background.webp) 0 0/cover no-repeat; }
